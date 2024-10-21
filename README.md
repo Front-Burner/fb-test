@@ -35,11 +35,11 @@ On the Locations page we need to see a list of all locations. We want you to acc
 On the home page we would like to feature 1 menu item. 
 
 1) Create a single menu item reference on Sanity for only the home page. Then create its type and add it to the query file. 
-2) IMPORTANT: Instead of querying the data on page.tsx, we want you to query the item directly in a separate client component. Remember your React Hooks. Build out that component and add it to the home page. 
+2) IMPORTANT: Instead of querying the data on page.tsx, we want you to query the item directly in a separate client component. Remember your React Hooks. Build out that component and render it to the home page. 
 
 ## Extra Credit - Create a drop down that selects and updates the preferred location. 
 
-Create a dropdown on the home page that selects and updates the preferred location. The component has already been started under select-location and includes the correct imports. Use context/location.tsx & helpers folder for reference. 
+Create a dropdown on the home page that selects and updates the preferred location. The component has already been started under select-location and includes the correct imports. Use context/location.tsx & helpers folder for reference. The final component should render all fields of the selected location on the home page and update when a new location is selected.
 
 ## Notables
 
