@@ -21,6 +21,7 @@ export const getMenu = groq`*[_type == "menu"]{
     },
     asset-> {
       ...,
+      url,
       metadata
     },
   },

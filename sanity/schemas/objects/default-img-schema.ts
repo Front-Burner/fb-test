@@ -9,6 +9,7 @@ export default defineType({
 		metadata: ['lqip'],
 		collapsible: true,
 	},
+	validation: Rule => Rule.required().error('Image is required'),
   fields: [
     defineField({
       name: 'alt',
@@ -27,7 +28,7 @@ export default defineType({
 			const { name, image } = selection
 			return {
 				title: `${name ? name : 'No Alternative Text Provided'}`,
-				media: image,
+				media: `${image ? image : 'No Image Provided'}`,
 			}
 		},
 	},
