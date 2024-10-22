@@ -1,5 +1,5 @@
 'use client'
-//import { LocationType } from '@/types/documents/location-type'
+import { LocationType } from '@/types/documents/location-type'
 import { LocationContext, LocationContextType } from '@/context/location'
 import {
 	useContext,
@@ -9,11 +9,23 @@ import {
 import { useCookies } from 'react-cookie'
 import HandleLocation from '@/helpers/handle-location'
 
+
+
+
+
+
+//EXTRA CREDIT???
+
+
+
+
+
+
 interface ILocationSelect extends Array<any> {} // update to LocationType
 
 const LocationMenuSelect = ({ locations }: { locations: ILocationSelect }) => {
 	const [cookies, setCookie] = useCookies(['nearestLocation'])
-	
+
 
 	/* === LOCATION LOGIC === */
 
