@@ -6,9 +6,9 @@ export const getLocation = groq`*[_type == "location"]{
   _createdAt,
   _updatedAt,
   title,
-  kind,
+  _type,
+  _rev,
   description,
-  price,
   image {
     alt,
     caption,

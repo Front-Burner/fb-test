@@ -1,4 +1,5 @@
 import { SeoType } from '../components/seo-type'
+import {FeatureType} from "@/types/documents/feature-type";
 
 export type PageType = {
 	_id: string
@@ -10,6 +11,7 @@ export type PageType = {
 		current: string
 	}
 	seo: SeoType
+    feature: FeatureType
   navigation: {
     title: string
     navItems: {

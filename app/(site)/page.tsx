@@ -50,6 +50,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 export default async function Home() {
 	const global = await client.fetch(getGlobal)
 	const navigation = await client.fetch(getNavigation)
+    // const page = await client.fetch(getPage)
 
 	return (
 		<HomePage
