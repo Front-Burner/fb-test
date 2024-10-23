@@ -14,14 +14,14 @@ import route from './objects/route-schema'
 
 
 const schemas = [
-  page,
-  navigation,
-  global,
-  location,
-  menu,
-  seo,
-  defaultImage,
-  route
+    page,
+    navigation,
+    global,
+    location,
+    menu,
+    seo,
+    defaultImage,
+    route
 ]
 
 

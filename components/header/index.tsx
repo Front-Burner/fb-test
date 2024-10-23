@@ -11,7 +11,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ navigation, global }) => {
 
- 
   return (
     <header className="flex justify-between items-center p-4">
       <Link href={'/'}>

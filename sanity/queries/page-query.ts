@@ -10,6 +10,7 @@ export const getPage = groq`*[_type == "page" && slug.current == $slug][0]{
   _createdAt,
   _updatedAt,
   title,
+  featuredItem,
   "slug": slug.current,
   seo {
     ...,

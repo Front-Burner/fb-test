@@ -1,13 +1,11 @@
-
 export const UpdateLocation = (
-  location: any,
+    location: any,
 ) => {
+    const newLocationState = {
+        _id: location._id,
+        title: location.title,
+        description: location.description,
+    }
 
-  const newLocationState = {
-    _id: location._id,
-		title: location.title,
-		description: location.seo.description,
-  }
-  
-  return newLocationState
+    return newLocationState
 }

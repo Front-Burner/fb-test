@@ -25,7 +25,6 @@ const MenuPage: React.FC<PageProps> = ({
   menu
 }) => {
 
-
   return (
     <>
       <Header navigation={navigation} global={global} />
@@ -39,6 +38,7 @@ const MenuPage: React.FC<PageProps> = ({
                 <div className='w-1/3'>
                   <SanityImage
                     source={item.image}
+
                     alt={item.image.alt}
                     width={200}
                     height={200}
@@ -62,7 +62,7 @@ const MenuPage: React.FC<PageProps> = ({
               <div key={index} className='flex w-full items-center'>
                 <div className='w-1/3'>
                   <SanityImage
-                    source={item.image}
+                    source={item?.image}
                     alt={item.image.alt}
                     width={200}
                     height={200}

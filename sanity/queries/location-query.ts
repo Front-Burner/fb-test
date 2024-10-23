@@ -1,14 +1,14 @@
 import { groq } from 'next-sanity'
 
 
-export const getMenu = groq`*[_type == "menu"]{
+export const getLocation = groq`*[_type == "location"]{
   _id,
   _createdAt,
   _updatedAt,
   title,
-  kind,
+  _type,
+  _rev,
   description,
-  price,
   image {
     alt,
     caption,

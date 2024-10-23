@@ -23,6 +23,13 @@ export default defineType({
       title: 'SEO',
       type: 'seo',
     }),
+      defineField({
+          name: "featuredItem",
+          type: "reference",
+          title: "Select Featured Menu Item",
+          to: [{type: "menu"}],
+          hidden: ({document}: any) => document.title != "Home"
+      }),
   ],
   preview: {
 		select: {
@@ -35,6 +42,7 @@ export default defineType({
 			return {
 				title: trash ? `🛑 ${title}` : title,
 				subtitle: `${slug === 'home' ? 'Home Page' : ''}`,
+                // slug: `${slug != }`
 			}
 		},
 	},
