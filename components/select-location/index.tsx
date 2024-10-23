@@ -56,14 +56,6 @@ const LocationMenuSelect = ({locations}: { locations: ILocationSelect }) => {
                         <div className={"italic"}>
                             {location.title}
                         </div>
-                        <SanityImage source={location.image}
-                                     alt={location.image.alt}
-                                     width={100}
-                                     height={100}
-                                     componentIndex={1}
-                                     role='none'
-                                     sizes={`(min-width: 1024px) 1024px, 100vw`}
-                        />
                         <div className={"truncate ... w-32"}>
                             {location.description}
                         </div>
