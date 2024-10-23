@@ -9,19 +9,7 @@ import {
 import { useCookies } from 'react-cookie'
 import HandleLocation from '@/helpers/handle-location'
 
-
-
-
-
-
-//EXTRA CREDIT???
-
-
-
-
-
-
-interface ILocationSelect extends Array<any> {} // update to LocationType
+interface ILocationSelect extends Array<LocationType> {} // update to LocationType
 
 const LocationMenuSelect = ({ locations }: { locations: ILocationSelect }) => {
 	const [cookies, setCookie] = useCookies(['nearestLocation'])

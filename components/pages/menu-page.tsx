@@ -25,7 +25,6 @@ const MenuPage: React.FC<PageProps> = ({
   menu
 }) => {
 
-
   return (
     <>
       <Header navigation={navigation} global={global} />

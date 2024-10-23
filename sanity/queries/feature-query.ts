@@ -10,5 +10,21 @@ _updatedAt,
 slug,
 featuredItem->{
     ...,
+    image {
+    alt,
+    caption,
+    crop {
+      ...
+    },
+    hotspot {
+      x,
+      y
+    },
+    asset-> {
+      ...,
+      url,
+      metadata
+    },
+  },
 },
 }`

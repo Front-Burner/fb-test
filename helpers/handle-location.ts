@@ -1,4 +1,4 @@
-//import { LocationType } from '../types/documents/location-type'
+import { LocationType } from '../types/documents/location-type'
 import { UpdateLocation } from './update-location'
 
 const HandleLocation = (
