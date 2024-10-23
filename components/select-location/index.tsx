@@ -15,7 +15,7 @@ interface ILocationSelect extends Array<LocationType> {
 
 const LocationMenuSelect = ({locations}: { locations: ILocationSelect }) => {
     const [cookies, setCookie] = useCookies(['nearestLocation'])
-    const [locationSelect, setLocationSelect] = useState<string>()
+    const [locationSelect, setLocationSelect] = useState<LocationType>()
 
     /* === LOCATION LOGIC === */
 
@@ -23,29 +23,35 @@ const LocationMenuSelect = ({locations}: { locations: ILocationSelect }) => {
         LocationContext,
     ) as LocationContextType
 
-    const handleLocationSelectChange = (e: React.FormEvent<HTMLOptionElement>) => {
-        setLocationSelect(e.target.value)
+    const handleLocationSelectChange = (e: React.FormEvent<HTMLSelectElement>) => {
+        const selectedLocation = e.target.value
+        const selectedOption = locations.find(option => option.title === selectedLocation)
+        setLocationSelect(selectedOption)
+        handleUpdateLocationContext(selectedOption)
     }
     const handleUpdateLocationContext = (location: LocationType) => {
         HandleLocation(location, updateLocationContext, setCookie)
     } // change to LocationType
 
+    //I was trying to handle the context with this hook, but I instead implemented the context with the handleLocationSelect function
+    // This useEffect is inactive
     useEffect(() => {
-        // handleUpdateLocationContext(locationContext)
+        // handleUpdateLocationContext(locationSelect)
     }, [locationContext])
     /* === END LOCATION LOGIC === */
+
     return (
         <div className={"mx-2 p-2"}>
-            <div>Preferred location:</div>
-            <select value={locationSelect} onChange={handleLocationSelectChange}>
+            <div>Preferred Location: {locationContext?.title}</div>
+            <select value={locationSelect?.title} onChange={handleLocationSelectChange}>
                 <option></option>
-                {locations.map((location, index) => (
-                    <option key={index} value={location.title}>{location.title}</option>
+                {locations.map((location) => (
+                    <option key={location.title} value={location.title}>{location.title}</option>
                 ))}
             </select>
             <div className={"flex flex-col p-2"}>
                 Your Location:
-                {locations.filter((location) => location.title === locationSelect).map((location) => (
+                {locations.filter((location) => location.title == locationSelect?.title).map((location) => (
                     <div key={location.title} className={"flex flex-col"}>
                         <div className={"italic"}>
                             {location.title}
